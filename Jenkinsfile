@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('q') {
+    stage('Code analysis') {
       steps {
-        sh 'mvn clean sonar:sonar'
+        withSonarQubeEnv('SonarQube') {
+          sh 'mvn clean sonar:sonar'
+        }
       }
     }
   }
