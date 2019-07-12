@@ -13,7 +13,12 @@ public class BadFieldNameUnderlineOrDollarCheck {
     int anInt$;
 
     enum Enum {
-        enumE;
+        enumE,
+        _enumE, // Noncompliant {{重命名此属性"_enumE"以使其满足正则表达式'^(?<![_$])[a-zA-Z][a-zA-Z0-9]*(?![_$])$'。}}
+        enumE_, // Noncompliant {{重命名此属性"enumE_"以使其满足正则表达式'^(?<![_$])[a-zA-Z][a-zA-Z0-9]*(?![_$])$'。}}
+        $enumE, // Noncompliant {{重命名此属性"$enumE"以使其满足正则表达式'^(?<![_$])[a-zA-Z][a-zA-Z0-9]*(?![_$])$'。}}
+        enumE$; // Noncompliant {{重命名此属性"enumE$"以使其满足正则表达式'^(?<![_$])[a-zA-Z][a-zA-Z0-9]*(?![_$])$'。}}
+
         int anInt;
         int _anInt;
         int anInt_;
