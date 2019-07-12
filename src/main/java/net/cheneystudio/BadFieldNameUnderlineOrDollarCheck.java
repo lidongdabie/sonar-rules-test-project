@@ -41,4 +41,5 @@ public class BadFieldNameUnderlineOrDollarCheck {
         int $anInt = 0;
         int anInt$ = 0;
     }
+
 }
