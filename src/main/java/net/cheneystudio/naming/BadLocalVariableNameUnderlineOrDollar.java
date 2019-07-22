@@ -1,4 +1,4 @@
-package net.cheneystudio;
+package net.cheneystudio.naming;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.io.IOException;
  *
  * @author Cheney Wong
  */
-public class BadLocalVariableNameUnderlineOrDollarCheck {
+public class BadLocalVariableNameUnderlineOrDollar {
     static {
         int anInt;
         int _anInt;
@@ -53,6 +53,7 @@ public class BadLocalVariableNameUnderlineOrDollarCheck {
         try (
                 Closeable closeable =
                         () -> {
+                            int anInt;
                         }
         ) {
         } catch (
@@ -63,6 +64,7 @@ public class BadLocalVariableNameUnderlineOrDollarCheck {
         try (
                 Closeable _closeable =
                         () -> {
+                            int _anInt;
                         }
         ) {
         } catch (
@@ -152,7 +154,7 @@ public class BadLocalVariableNameUnderlineOrDollarCheck {
         try (
                 Closeable closeable =
                         () -> {
-                            int anint;
+                            int anInt;
                         }
         ) {
         } catch (
@@ -163,7 +165,7 @@ public class BadLocalVariableNameUnderlineOrDollarCheck {
         try (
                 Closeable _closeable =
                         () -> {
-                            int _anint;
+                            int _anInt;
                         }
         ) {
         } catch (

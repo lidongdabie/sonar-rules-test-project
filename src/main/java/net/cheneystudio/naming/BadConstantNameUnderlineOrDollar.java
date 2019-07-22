@@ -1,29 +1,17 @@
-package net.cheneystudio;
+package net.cheneystudio.naming;
 
 /**
- * Create on 2019-07-11 17:08
+ * Create on 2019-07-16 13:52
  *
  * @author Cheney Wong
  */
-public class BadFieldNameUnderlineOrDollarCheck {
-    int anInt;
-    int _anInt;
-    int anInt_;
-    int $anInt;
-    int anInt$;
-
+public class BadConstantNameUnderlineOrDollar {
     enum Enum {
         enumE,
         _enumE,
         enumE_,
         $enumE,
-        enumE$;
-
-        int anInt;
-        int _anInt;
-        int anInt_;
-        int $anInt;
-        int anInt$;
+        enumE$
     }
 
     interface Interface {
@@ -41,5 +29,4 @@ public class BadFieldNameUnderlineOrDollarCheck {
         int $anInt = 0;
         int anInt$ = 0;
     }
-
 }
