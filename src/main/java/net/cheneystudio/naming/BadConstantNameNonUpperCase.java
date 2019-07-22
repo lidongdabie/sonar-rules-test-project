@@ -1,11 +1,18 @@
 package net.cheneystudio.naming;
 
+import java.io.Serializable;
+
 /**
  * Create on 2019-07-17 15:51
  *
  * @author Cheney Wong
  */
 public class BadConstantNameNonUpperCase {
+
+    class MySerializableClass implements Serializable {
+        private static final long serialVersionUID = 0L;
+    }
+
     enum Enum {
         ENUM_E,
         EnumE,
