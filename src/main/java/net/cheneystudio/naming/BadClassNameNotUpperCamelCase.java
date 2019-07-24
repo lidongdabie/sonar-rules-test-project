@@ -7,65 +7,50 @@ package net.cheneystudio.naming;
  */
 public class BadClassNameNotUpperCamelCase {
     enum MyEnum {
-
     }
 
     enum Myenum {
-
     }
 
     enum myEnum {
-
     }
 
     enum myenum {
-
     }
 
     interface MyInterface {
-
     }
 
     interface Myinterface {
-
     }
 
     interface myInterface {
-
     }
 
     interface myinterface {
-
     }
 
     @interface MyAnnotation {
-
     }
 
     @interface Myannotation {
-
     }
 
     @interface myAnnotation {
-
     }
 
     @interface myannotation {
-
     }
 
     class MyClass {
     }
 
     class Myclass {
-
     }
 
     class myClass {
-
     }
 
     class myclass {
-
     }
 }

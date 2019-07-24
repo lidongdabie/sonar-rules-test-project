@@ -8,7 +8,6 @@ import java.io.Serializable;
  * @author Cheney Wong
  */
 public class BadConstantNameNonUpperCase {
-
     class MySerializableClass implements Serializable {
         private static final long serialVersionUID = 0L;
     }

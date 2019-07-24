@@ -27,9 +27,7 @@ public class MagicValue {
     static final int[] CONSTANT_INT_ARRAY_B = new int[42];
     static final int[] CONSTANT_INT_ARRAY_C = new int[]{42};
     static final int[][] CONSTANT_TWO_DIMENSION_INT_ARRAY_A = {{42}};
-    static final int[][] CONSTANT_TWO_DIMENSION_INT_ARRAY_B = new int
-            [42]
-            [42];
+    static final int[][] CONSTANT_TWO_DIMENSION_INT_ARRAY_B = new int[42][42];
     static final int[][] CONSTANT_TWO_DIMENSION_INT_ARRAY_C = new int[][]{{42}};
     static final String[] CONSTANT_STRING_ARRAY = {"42"};
     static final String[][] CONSTANT_TWO_DIMENSION_STRING_ARRAY = {{"42"}};
@@ -75,9 +73,7 @@ public class MagicValue {
     int[] intArrayMagicB = new int[42];
     int[] intArrayMagicC = new int[]{42};
     int[][] twoDimensionIntArrayMagicA = {{42}};
-    int[][] twoDimensionIntArrayMagicB = new int
-            [42]
-            [42];
+    int[][] twoDimensionIntArrayMagicB = new int[42][42];
     int[][] twoDimensionIntArrayMagicC = new int[][]{{42}};
     String[] stringArrayMagic = {"42"};
     String[][] twoDimensionStringArrayMagic = {{"42"}};
@@ -104,32 +100,16 @@ public class MagicValue {
 
     void methodB() {
         int intA = 1 + 1;
-        int intB =
-                1 +
-                        42;
-        int intC =
-                1 +
-                        method(1);
-        int intD =
-                1 +
-                        method(42);
-        int intE =
-                method(42) +
-                        method(42);
+        int intB = 1 + 42;
+        int intC = 1 + method(1);
+        int intD = 1 + method(42);
+        int intE = method(42) + method(42);
 
         String stringA = "" + "";
-        String stringB =
-                "" +
-                        "42";
-        String stringC =
-                "" +
-                        method("");
-        String stringD =
-                "" +
-                        method("42");
-        String stringE =
-                method("42") +
-                        method("42");
+        String stringB = "" + "42";
+        String stringC = "" + method("");
+        String stringD = "" + method("42");
+        String stringE = method("42") + method("42");
     }
 
     void methodC() {
@@ -145,25 +125,12 @@ public class MagicValue {
         intX += method(42);
 
         intX = 1 + 1;
-        intX =
-                1 +
-                        42;
-        intX =
-                1 +
-                        method(1);
-        intX =
-                1 +
-                        method(42);
-        intX =
-                method(42) +
-                        method(42);
+        intX = 1 + 42;
+        intX = 1 + method(1);
+        intX = 1 + method(42);
+        intX = method(42) + method(42);
 
-        intX += (
-                method(42)
-                        +
-                        (
-                                42 +
-                                        42));
+        intX += (method(42) + (42 + 42));
     }
 
     void methodD() {
@@ -179,42 +146,21 @@ public class MagicValue {
         stringX += method("42");
 
         stringX = "" + "";
-        stringX =
-                "" +
-                        "42";
-        stringX =
-                "" +
-                        method("");
-        stringX =
-                "" +
-                        method("42");
-        stringX =
-                method("42") +
-                        method("42");
+        stringX = "" +
+                "42";
+        stringX = "" + method("");
+        stringX = "" + method("42");
+        stringX = method("42") + method("42");
 
-        stringX += (
-                method("42")
-                        +
-                        (
-                                "42" +
-                                        "42"));
+        stringX += (method("42") + ("42" +
+                "42"));
     }
 
     void methodE() {
-        for (
-                int i = 0;
-                i < 1;
-                i++
-        ) {
-
+        for (int i = 0; i < 1; i++) {
         }
 
-        for (
-                int i = 0;
-                i < 42;
-                i++
-        ) {
-
+        for (int i = 0; i < 42; i++) {
         }
     }
 }

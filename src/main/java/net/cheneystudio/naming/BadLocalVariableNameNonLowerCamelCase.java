@@ -16,138 +16,82 @@ public class BadLocalVariableNameNonLowerCamelCase {
     }
 
     static {
-        for (
-                int anInt = 0;
-                anInt < Integer.SIZE;
-                anInt++
-        ) {
+        for (int anInt = 0; anInt < Integer.SIZE; anInt++) {
         }
 
-        for (
-                int AnInt = 0;
-                AnInt < Integer.SIZE;
-                AnInt++
-        ) {
+        for (int AnInt = 0; AnInt < Integer.SIZE; AnInt++) {
         }
     }
 
     static {
         int[] intArray = new int[0];
 
-        for (
-                int anInt :
-                intArray.clone()
-        ) {
+        for (int anInt : intArray.clone()) {
         }
 
-        for (
-                int AnInt :
-                intArray.clone()
-        ) {
+        for (int AnInt : intArray.clone()) {
         }
     }
 
     static {
-        try (
-                Closeable closeable =
-                        () -> {
-                            int anInt;
-                        }
-        ) {
-        } catch (
-                IOException e
-        ) {
+        try (Closeable closeable = () -> {
+            int anInt;
+        }) {
+        } catch (IOException e) {
         }
 
-        try (
-                Closeable Closeable =
-                        () -> {
-                            int AnInt;
-                        }
-        ) {
-        } catch (
-                IOException E
-        ) {
+        try (Closeable Closeable = () -> {
+            int AnInt;
+        }) {
+        } catch (IOException E) {
         }
     }
 
-    Closeable closeable =
-            () -> {
-                int anInt;
-            };
+    Closeable closeable = () -> {
+        int anInt;
+    };
 
-    Closeable Closeable =
-            () -> {
-                int AnInt;
-            };
+    Closeable Closeable = () -> {
+        int AnInt;
+    };
 
-    void methodCompliant(
-            int anInt
-    ) {
-        int anotherInt =
-                anInt;
+    void methodCompliant(int anInt) {
+        int anotherInt = anInt;
     }
 
-    void methodNoncompliant(
-            int AnInt
-    ) {
-        int AnotherInt =
-                AnInt;
+    void methodNoncompliant(int AnInt) {
+        int AnotherInt = AnInt;
     }
 
     void methodFor() {
-        for (
-                int anInt = 0;
-                anInt < Integer.SIZE;
-                anInt++
-        ) {
+        for (int anInt = 0; anInt < Integer.SIZE; anInt++) {
         }
 
-        for (
-                int AnInt = 0;
-                AnInt < Integer.SIZE;
-                AnInt++
-        ) {
+        for (int AnInt = 0; AnInt < Integer.SIZE; AnInt++) {
         }
     }
 
     void methodForeach() {
         int[] intArray = new int[0];
 
-        for (
-                int anInt :
-                intArray.clone()
-        ) {
+        for (int anInt : intArray.clone()) {
         }
 
-        for (
-                int AnInt :
-                intArray.clone()
-        ) {
+        for (int AnInt : intArray.clone()) {
         }
     }
 
     void methodTryCatch() {
-        try (
-                Closeable closeable =
-                        () -> {
-                            int anInt;
-                        }
-        ) {
-        } catch (
-                IOException e
-        ) {
+        try (Closeable closeable = () -> {
+            int anInt;
+        }) {
+        } catch (IOException e) {
         }
 
-        try (
-                Closeable Closeable =
-                        () -> {
-                            int AnInt;
-                        }
-        ) {
-        } catch (
-                IOException E
-        ) {
+        try (Closeable Closeable = () -> {
+            int AnInt;
+        }) {
+        } catch (IOException E) {
         }
     }
 }

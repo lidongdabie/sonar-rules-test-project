@@ -7,22 +7,17 @@ package net.cheneystudio.naming;
  */
 public class BadMethodNameUnderlineOrDollar {
     void method() {
-
     }
 
     void _method() {
-
     }
 
     void method_() {
-
     }
 
     void $method() {
-
     }
 
     void method$() {
-
     }
 }

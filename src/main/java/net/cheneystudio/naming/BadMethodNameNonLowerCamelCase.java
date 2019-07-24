@@ -7,22 +7,17 @@ package net.cheneystudio.naming;
  */
 public class BadMethodNameNonLowerCamelCase {
     void methodCompliant() {
-
     }
 
     void MethodNoncompliant1() {
-
     }
 
     void METHODNONCOMPLIANT2() {
-
     }
 
     void method_noncompliant_3() {
-
     }
 
     void METHOD_NONCOMPLIANT_4() {
-
     }
 }
