@@ -11,6 +11,7 @@ public class MagicValue {
     static final float CONSTANT_FLOAT_42 = 42.0F;
     static final double CONSTANT_DOUBLE_42 = 42.0D;
     static final String CONSTANT_STRING_42 = "42";
+    static final char CONSTANT_QUESTION_MARK = '?';
     static final int CONSTANT_BINARY_A = 0B00;
     static final int CONSTANT_BINARY_B = 0B0_0;
     static final int CONSTANT_OCTAL_A = 00;
@@ -49,6 +50,7 @@ public class MagicValue {
     float magicFloat = 42.0F;
     double magicDouble = 42.0D;
     String magicString = "42";
+    char magicChar = '?';
     int binaryA = 0B00;
     int binaryB = 0B0_0;
     int octalA = 00;
@@ -161,6 +163,69 @@ public class MagicValue {
         }
 
         for (int i = 0; i < 42; i++) {
+        }
+    }
+
+    int methodF() {
+        return 42;
+    }
+
+    int methodG() {
+        return 42 + 42;
+    }
+
+    String methodH() {
+        return "42";
+    }
+
+    String methodI() {
+        return "42" + "42";
+    }
+
+    String methodJ() {
+        return "42" + 42;
+    }
+
+    @interface MyAnnotation {
+        String value();
+    }
+
+    class MyClassA {
+        @Override
+        @MyAnnotation("42")
+        public String toString() {
+            return "42";
+        }
+
+        @Override
+        public int hashCode() {
+            return 42;
+        }
+    }
+
+    class MyClassB {
+        @Override
+        @MyAnnotation("42")
+        public String toString() {
+            return "42" + "42";
+        }
+
+        @Override
+        public int hashCode() {
+            return 42;
+        }
+    }
+
+    class MyClassC {
+        @Override
+        @MyAnnotation("42")
+        public String toString() {
+            return "42" + 42;
+        }
+
+        @Override
+        public int hashCode() {
+            return 42;
         }
     }
 }
