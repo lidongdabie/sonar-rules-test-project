@@ -5,7 +5,7 @@ package net.cheneystudio.naming;
  *
  * @author Cheney Wong
  */
-public class BadClassNameNotUpperCamelCase {
+public class BadClassNameNonUpperCamelCase {
     enum MyEnum {
     }
 
