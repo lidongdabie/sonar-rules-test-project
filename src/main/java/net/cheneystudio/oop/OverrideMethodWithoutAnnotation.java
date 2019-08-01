@@ -10,6 +10,7 @@ public class OverrideMethodWithoutAnnotation {
         public void methodFromInterface() {
         }
     };
+
     AncestorInterface newInstanceB = new AncestorInterface() {
         @Override
         public void methodFromInterface() {

@@ -4,7 +4,7 @@ pipeline {
     stage('Code analysis') {
       steps {
         withSonarQubeEnv('SonarQube') {
-          sh 'mvn clean compile -e sonar:sonar -Dsonar.java.binaries=./target'
+          sh 'mvn clean package -e sonar:sonar -Dsonar.java.binaries=./target'
         }
 
       }
